@@ -1,3 +1,3 @@
 # snaily-chat
 ---
-The backend for snaily-caht
+The backend for snaily-chat
