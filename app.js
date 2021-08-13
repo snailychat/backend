@@ -2,8 +2,12 @@ const ws = require('ws');
 const randomatic = require('randomatic');
 const port = process.env.SERVER_PORT || process.env.PORT || 8080;
 
+const server = require('http').createServer();
 const wss = new ws.Server({
-	port
+	server
+});
+server.listen(port, () => {
+	console.log(`On port: ${port}`);
 });
 
 let connections = [];
