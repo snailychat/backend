@@ -9,6 +9,10 @@ const wss = new ws.Server({
 server.listen(port, () => {
 	console.log(`On port: ${port}`);
 });
+server.on('request', (req, res) => {
+	res.writeHead(200);
+    res.end('Hello');
+});
 
 let connections = [];
 wss.on('connection', socket => {
